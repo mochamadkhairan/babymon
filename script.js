@@ -111,11 +111,25 @@ const memories = {
    IMAGE FALLBACK
 ================================================= */
 
-birthdayPhoto.addEventListener("load", () => {
+function revealBirthdayPhoto() {
 
     heroPhoto.classList.add("has-image");
 
-});
+}
+
+
+// If the image already finished loading before this script ran
+// (e.g. it was fast or cached), the "load" event already fired
+// and will never fire again — so check img.complete first.
+if (birthdayPhoto.complete && birthdayPhoto.naturalWidth > 0) {
+
+    revealBirthdayPhoto();
+
+} else {
+
+    birthdayPhoto.addEventListener("load", revealBirthdayPhoto);
+
+}
 
 
 birthdayPhoto.addEventListener("error", () => {
