@@ -3,11 +3,6 @@
    SECTION 1 - 4
 ================================================= */
 
-
-/* =================================================
-   ELEMENTS
-================================================= */
-
 const openGiftButton =
     document.getElementById("openGiftButton");
 
@@ -80,44 +75,33 @@ let heartInterval = null;
    MEMORY CONTENT
 ================================================= */
 
-/*
-    Nanti bagian ini bisa kamu ganti
-    dengan cerita asli kalian.
-*/
-
 const memories = {
 
     memoryOne: {
-        title: "That Little Moment",
+        title: "Jalan jalan di Blok M",
         text:
-            "Some moments may look ordinary, " +
-            "but somehow they become the ones " +
-            "I want to remember forever."
+            "Aku yg baru liat Blok M secara langsung, " +
+            "Terus kita jalan-jalan di sana. " +
+            "Dan coba sablon tote bag sambil ngelukis."
     },
 
     memoryTwo: {
-        title: "You Looked Cute",
+        title: "Kibo is yours",
         text:
-            "I probably don't say it enough, " +
-            "but there are so many random moments " +
-            "when I look at you and think, " +
-            "'How can someone be this cute?'"
+            "Kamu lucuuu banget waktu meluk kibo, " +
+            "momen ini juga favorit aku karena aku bisa kasih kamu something. "
     },
 
     memoryThree: {
-        title: "One Of My Favorites",
+        title: "Ragunan Date",
         text:
-            "I don't need a big occasion to remember you. " +
-            "Sometimes one tiny moment is already enough " +
-            "to make me smile."
+            "Kita jalan jalan di Ragunan ini seruu banget, apalagi pas kita naik sepeda bareng haha. Terus kita lanjut pake motor listrik sampe keliling Ragunan. Aku suka banget momen ini karena kita bisa jalan jalan bareng sambil ketawa ketawa."
     },
 
     memoryFour: {
-        title: "Just Us",
+        title: "Tentang Kita",
         text:
-            "No special occasion. No perfect setup. " +
-            "Just us being us. " +
-            "And honestly, those are some of my favorite moments."
+            "Semua hal yang kita jalani bareng itu seru banget, mulai dari jalan jalan, makan bareng, nonton film bareng, sampe ngobrol random. Aku suka banget sama kamu karena kamu selalu bikin aku senyum dan ketawa. Aku bersyukur banget bisa punya kamu di hidup aku."
     }
 
 };
@@ -1156,7 +1140,125 @@ openLetterButton.addEventListener(
     }
 );
 
+/* =================================================
+   SECTION 7
+   THINGS I LOVE ABOUT YOU
+================================================= */
 
+const finalButton =
+    document.getElementById("finalButton");
+
+
+if (finalButton) {
+
+    finalButton.addEventListener(
+        "click",
+        () => {
+
+            const finalSection =
+                document.getElementById("final");
+
+            if (finalSection) {
+
+                finalSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =================================================
+   SECTION 8
+   FINAL SURPRISE
+================================================= */
+
+const surpriseButton =
+    document.getElementById("surpriseButton");
+
+const finalSurprise =
+    document.getElementById("finalSurprise");
+
+
+let surpriseOpened = false;
+
+
+if (
+    surpriseButton &&
+    finalSurprise
+) {
+
+    surpriseButton.addEventListener(
+        "click",
+        () => {
+
+            if (surpriseOpened) {
+                return;
+            }
+
+
+            surpriseOpened = true;
+
+
+            surpriseButton.innerHTML =
+                `
+                    <span>
+                        ♡
+                    </span>
+
+                    <span>
+                        For You, Always
+                    </span>
+                `;
+
+
+            surpriseButton.style.opacity =
+                "0.7";
+
+            surpriseButton.style.pointerEvents =
+                "none";
+
+
+            /*
+                Small delay so the button
+                feels like it is opening
+                the final surprise.
+            */
+
+            setTimeout(
+                () => {
+
+                    finalSurprise.classList.add(
+                        "visible"
+                    );
+
+
+                    createHearts(18);
+
+
+                    setTimeout(
+                        () => {
+
+                            finalSurprise.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center"
+                            });
+
+                        },
+                        350
+                    );
+
+                },
+                500
+            );
+
+        }
+    );
+}
 /* =================================================
    AMBIENT HEARTS
 ================================================= */

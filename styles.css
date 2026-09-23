@@ -2838,5 +2838,815 @@ button:focus-visible,
     .letter-greeting {
         font-size: 29px;
     }
+}
 
+/* =================================================
+   SECTION 7
+   THINGS I LOVE ABOUT YOU
+================================================= */
+
+.things-section {
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(248, 221, 227, 0.8),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(231, 168, 184, 0.25),
+            transparent 30%
+        ),
+        #fff8f5;
+
+    padding:
+        100px 20px 120px;
+}
+
+
+.things-content {
+
+    width: min(100%, 900px);
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* LOVE GRID */
+
+.love-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin:
+        0 auto 55px;
+}
+
+
+.love-card {
+
+    position: relative;
+
+    padding:
+        30px 25px;
+
+    text-align: left;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border:
+        1px solid
+        rgba(125, 63, 80, 0.08);
+
+    border-radius: 22px;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    transition:
+        transform 0.4s var(--transition),
+        box-shadow 0.4s ease;
+}
+
+
+.love-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 25px 55px
+        rgba(100, 54, 67, 0.13);
+}
+
+
+/* NUMBER */
+
+.love-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    color:
+        rgba(125, 63, 80, 0.22);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.15em;
+
+    font-weight: 700;
+}
+
+
+/* ICON */
+
+.love-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background:
+        var(--pink-light);
+
+    color:
+        var(--rose-dark);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.5rem;
+}
+
+
+.love-card h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    color:
+        var(--burgundy);
+
+    margin-bottom: 12px;
+}
+
+
+.love-card p {
+
+    color:
+        var(--brown-light);
+
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+}
+
+
+.love-card-special {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffafa,
+            #fff0f3
+        );
+
+    border-color:
+        rgba(217, 143, 163, 0.22);
+}
+
+
+.love-card-special strong {
+
+    display: block;
+
+    margin-top: 18px;
+
+    color:
+        var(--rose-dark);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.15rem;
+
+    font-style: italic;
+}
+
+
+/* ENDING */
+
+.things-ending {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+
+    color:
+        var(--brown-light);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+}
+
+
+.things-ending span {
+
+    width: 40px;
+
+    height: 1px;
+
+    background:
+        var(--pink);
+}
+
+
+/* =================================================
+   SECTION 8
+   FINAL SURPRISE
+================================================= */
+
+.final-section {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #fff1f3,
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            #f8eee9,
+            #f4dfe1
+        );
+
+    padding:
+        100px 20px;
+}
+
+
+.final-content {
+
+    width:
+        min(100%, 700px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    z-index: 5;
+}
+
+
+.final-background-heart {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(18rem, 50vw, 35rem);
+
+    color:
+        rgba(217, 143, 163, 0.08);
+
+    pointer-events:
+        none;
+
+    line-height:
+        1;
+
+    animation:
+        slowFloat 7s ease-in-out infinite;
+}
+
+
+.final-label {
+
+    color:
+        var(--rose-dark);
+
+    font-size:
+        0.68rem;
+
+    letter-spacing:
+        0.3em;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        18px;
+}
+
+
+.final-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color:
+        var(--burgundy);
+
+    font-size:
+        clamp(3.5rem, 12vw, 6rem);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        25px;
+}
+
+
+.final-intro {
+
+    color:
+        var(--brown-light);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1.35rem;
+
+    font-style:
+        italic;
+
+    margin-bottom:
+        45px;
+}
+
+
+/* SURPRISE BUTTON */
+
+.surprise-button {
+
+    min-height:
+        58px;
+
+    padding:
+        0 30px;
+
+    border:
+        1px solid
+        rgba(125, 63, 80, 0.25);
+
+    border-radius:
+        999px;
+
+    background:
+        var(--burgundy);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(125, 63, 80, 0.22);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.surprise-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    background:
+        var(--burgundy-dark);
+
+    box-shadow:
+        0 20px 45px
+        rgba(125, 63, 80, 0.28);
+}
+
+
+.surprise-button-heart {
+
+    font-size:
+        1.15rem;
+}
+
+
+/* FINAL SURPRISE */
+
+.final-surprise {
+
+    max-width:
+        620px;
+
+    margin:
+        65px auto 0;
+
+    padding:
+        55px 35px;
+
+    background:
+        rgba(255, 253, 250, 0.88);
+
+    border:
+        1px solid
+        rgba(180, 120, 120, 0.14);
+
+    box-shadow:
+        0 30px 80px
+        rgba(75, 40, 40, 0.14);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(35px)
+        scale(0.97);
+
+    transition:
+        opacity 1s var(--transition),
+        transform 1s var(--transition),
+        visibility 1s ease;
+}
+
+
+.final-surprise.visible {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+.final-heart {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color:
+        var(--rose);
+
+    font-size:
+        4rem;
+
+    line-height:
+        1;
+
+    margin-bottom:
+        15px;
+
+    animation:
+        softPulse 2.5s ease-in-out infinite;
+}
+
+
+.final-small {
+
+    color:
+        var(--rose-dark);
+
+    font-size:
+        0.65rem;
+
+    letter-spacing:
+        0.3em;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        10px;
+}
+
+
+.final-surprise h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(3rem, 10vw, 4.5rem);
+
+    line-height:
+        1;
+
+    color:
+        var(--burgundy);
+
+    margin-bottom:
+        35px;
+}
+
+
+.final-message {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color:
+        var(--brown);
+
+    font-size:
+        1.25rem;
+
+    line-height:
+        1.7;
+}
+
+
+.final-message p {
+
+    margin-bottom:
+        22px;
+}
+
+
+.final-message p:nth-child(2) {
+
+    color:
+        var(--rose-dark);
+
+    font-size:
+        1.7rem;
+
+    font-style:
+        italic;
+
+    font-weight:
+        600;
+}
+
+
+.final-date {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    margin:
+        40px 0 25px;
+
+    color:
+        var(--rose-dark);
+
+    font-size:
+        0.68rem;
+
+    letter-spacing:
+        0.15em;
+
+    font-weight:
+        700;
+}
+
+
+.final-date-line {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    background:
+        var(--pink);
+}
+
+
+.final-infinity {
+
+    color:
+        var(--rose);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        3rem;
+
+    line-height:
+        1;
+
+    margin-bottom:
+        25px;
+}
+
+
+.final-closing {
+
+    color:
+        var(--burgundy);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1.4rem;
+
+    line-height:
+        1.6;
+
+    font-style:
+        italic;
+}
+
+
+.final-signature {
+
+    margin-top:
+        25px;
+
+    color:
+        var(--rose-dark);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1.3rem;
+}
+
+
+.final-footer {
+
+    margin-top:
+        70px;
+
+    color:
+        rgba(125, 63, 80, 0.55);
+
+    font-size:
+        0.68rem;
+
+    letter-spacing:
+        0.18em;
+}
+
+
+/* =================================================
+   SECTION 7–8 MOBILE
+================================================= */
+
+@media (max-width: 600px) {
+
+    .love-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
+    }
+
+
+    .love-card {
+
+        padding:
+            25px 22px;
+    }
+
+
+    .love-card h3 {
+
+        font-size:
+            1.8rem;
+    }
+
+
+    .things-ending {
+
+        font-size:
+            1.05rem;
+    }
+
+
+    .final-section {
+
+        padding:
+            80px 18px;
+    }
+
+
+    .final-surprise {
+
+        padding:
+            45px 23px;
+    }
+
+
+    .final-message {
+
+        font-size:
+            1.15rem;
+    }
+
+
+    .final-date {
+
+        gap:
+            9px;
+
+        font-size:
+            0.58rem;
+    }
+
+
+    .final-date-line {
+
+        width:
+            25px;
+    }
+
+
+    .final-footer {
+
+        margin-top:
+            50px;
+    }
 }
